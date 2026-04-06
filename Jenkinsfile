@@ -12,21 +12,21 @@ pipeline{
         stage("Run automated tests"){
             steps{
                 echo "Running automated tests"
-                sh "mvn clean test"
+                bat "mvn clean test"
             }
         }
 
         stage("Package Application"){
             steps{
                 echo "Packaging the application"
-                sh "mvn clean package"
+                bat "mvn clean package"
             }
         }
 
         stage("Deploy Application"){
             steps{
                 echo "Deploying the application"
-                sh "mvn spring-boot:run"
+                bat "mvn spring-boot:run"
         
         
             }
