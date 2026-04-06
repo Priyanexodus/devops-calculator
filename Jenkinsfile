@@ -23,13 +23,6 @@ pipeline{
             }
         }
 
-        stage("Deploy Application"){
-            steps{
-                echo "Deploying the application"
-                bat "mvn spring-boot:run"
         
-        
-            }
-        }
     }
 }
